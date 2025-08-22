@@ -58,13 +58,6 @@ function MoreActionsContent ({
           },
         },
       {
-        Icon: ReportIcon,
-        label: t('publish.reportPage'),
-        onClick: () => {
-          void openUrl('https://report.appflowy.io/', '_blank');
-        },
-      },
-      {
         Icon: TrashIcon,
         label: t('settings.files.clearCache'),
         onClick: () => {

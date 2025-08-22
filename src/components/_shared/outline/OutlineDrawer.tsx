@@ -1,8 +1,10 @@
-import { ReactComponent as AppFlowyLogo } from '@/assets/icons/appflowy.svg';
+import { ReactComponent as AppFlowyLogoLight } from '@/assets/icons/appflowy-light.svg';
+import { ReactComponent as AppFlowyLogoDark } from '@/assets/icons/appflowy-dark.svg';
+import { ThemeModeContext } from '@/components/main/useAppThemeMode';
+import { useContext } from 'react';
 import { ReactComponent as DoubleArrowLeft } from '@/assets/icons/double_arrow_left.svg';
 import Resizer from '@/components/_shared/outline/Resizer';
 import { useNavigate } from 'react-router-dom';
-import AppFlowyPower from '../appflowy-power/AppFlowyPower';
 import { createHotKeyLabel, HOT_KEY_NAME } from '@/utils/hotkeys';
 import { Drawer, IconButton, Tooltip } from '@mui/material';
 import { useTranslation } from 'react-i18next';
@@ -33,6 +35,7 @@ export function OutlineDrawer({
 
   const [hovered, setHovered] = useState<boolean>(false);
   const navigate = useNavigate();
+  const { isDark } = useContext(ThemeModeContext) || {};
 
   return (
     <Drawer
@@ -84,7 +87,7 @@ export function OutlineDrawer({
                 navigate('/app');
               }}
             >
-              <AppFlowyLogo className={'w-[88px]'} />
+              {isDark ? <AppFlowyLogoDark width={120} height={'auto'} /> : <AppFlowyLogoLight width={120} height={'auto'} />}
             </div>
           )}
 
@@ -104,7 +107,6 @@ export function OutlineDrawer({
           )}
         </div>
         <div className={'flex h-fit flex-1 flex-col'}>{children}</div>
-        {variant === 'publish' && <AppFlowyPower width={width} />}
       </AFScroller>
       <Resizer drawerWidth={width} onResize={onResizeWidth} />
     </Drawer>

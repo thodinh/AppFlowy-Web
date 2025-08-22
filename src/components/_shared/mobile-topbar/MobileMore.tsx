@@ -19,7 +19,7 @@ function MobileMore({ onClose }: { onClose: () => void }) {
         label: t('template.label'),
         icon: <TemplateIcon />,
         onClick: () => {
-          window.open('https://appflowy.com/templates', '_blank');
+          window.open('https://innoria.com/templates', '_blank');
         },
       },
       {
@@ -28,14 +28,7 @@ function MobileMore({ onClose }: { onClose: () => void }) {
         onClick: () => {
           navigate('/app/trash');
         },
-      },
-      {
-        label: t('questionBubble.help'),
-        onClick: () => {
-          window.open('https://discord.gg/9Q2xaN37tV', '_blank');
-        },
-        icon: <SupportIcon />,
-      },
+      }
     ];
   }, [navigate, t]);
 

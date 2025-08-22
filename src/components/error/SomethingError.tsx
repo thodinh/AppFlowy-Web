@@ -13,18 +13,7 @@ function SomethingError({ error }: { error: Error }) {
       <Alert className={'max-w-[90%] whitespace-pre-wrap break-words px-6 '} severity={'error'}>
         {error.message}
       </Alert>
-      <div className={'mt-4 whitespace-pre text-center text-lg text-text-title opacity-50'}>
-        {`We're sorry for inconvenience\n`}
-        Submit an issue on our{' '}
-        <a
-          className={'text-fill-default underline'}
-          href={'https://github.com/AppFlowy-IO/AppFlowy/issues/new?template=bug_report.yaml'}
-        >
-          Github
-        </a>{' '}
-        page that describes your error
-      </div>
-      <img src={emptyImageSrc} alt={'AppFlowy'} />
+      <img src={emptyImageSrc} alt={'iSphere'} />
     </div>
   );
 }

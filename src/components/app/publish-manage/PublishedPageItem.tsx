@@ -48,14 +48,6 @@ function PublishedPageItem({ namespace, onClose, view, onUnPublish }: {
   const actions = useMemo(() => {
     return [
       {
-        value: 'visit',
-        label: t('shareAction.visitSite'),
-        IconComponent: GlobalIcon,
-        onClick: () => {
-          void openUrl(url, '_blank');
-        },
-      },
-      {
         value: 'copy',
         label: t('shareAction.copyLink'),
         IconComponent: CopyIcon,

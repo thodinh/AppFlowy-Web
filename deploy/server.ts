@@ -10,7 +10,7 @@ import pino from 'pino';
 const distDir = path.join(__dirname, 'dist');
 const indexPath = path.join(distDir, 'index.html');
 const baseURL = process.env.AF_BASE_URL as string;
-const defaultSite = 'https://appflowy.com';
+const defaultSite = 'https://innoria.com';
 
 const setOrUpdateMetaTag = ($: CheerioAPI, selector: string, attribute: string, content: string) => {
   if ($(selector).length === 0) {
@@ -97,13 +97,13 @@ const createServer = async (req: Request) => {
     let title, description;
 
     if (reqUrl.pathname === '/after-payment') {
-      title = 'Payment Success | AppFlowy';
-      description = 'Payment success on AppFlowy';
+      title = 'Payment Success | iSphere';
+      description = 'Payment success on iSphere';
     }
 
     if (reqUrl.pathname === '/login') {
-      title = 'Login | AppFlowy';
-      description = 'Login to AppFlowy';
+      title = 'Login | iSphere';
+      description = 'Login to iSphere';
     }
 
     if (title) $('title').text(title);
@@ -164,8 +164,8 @@ const createServer = async (req: Request) => {
     const htmlData = fs.readFileSync(indexPath, 'utf8');
     const $ = load(htmlData);
 
-    const description = 'Write, share, and publish docs quickly on AppFlowy.\nGet started for free.';
-    let title = 'AppFlowy';
+    const description = 'Write, share, and publish docs quickly on iSphere.\nGet started for free.';
+    let title = 'iSphere';
     const url = `https://${hostname}${reqUrl.pathname}`;
     let image = '/og-image.png';
     let favicon = '/appflowy.ico';
@@ -198,7 +198,7 @@ const createServer = async (req: Request) => {
           titleList.push('|');
         }
 
-        titleList.push('AppFlowy');
+        titleList.push('iSphere');
         title = titleList.join(' ');
 
         try {
@@ -227,7 +227,7 @@ const createServer = async (req: Request) => {
     setOrUpdateMetaTag($, 'meta[property="og:description"]', 'property', description);
     setOrUpdateMetaTag($, 'meta[property="og:image"]', 'property', image);
     setOrUpdateMetaTag($, 'meta[property="og:url"]', 'property', url);
-    setOrUpdateMetaTag($, 'meta[property="og:site_name"]', 'property', 'AppFlowy');
+    setOrUpdateMetaTag($, 'meta[property="og:site_name"]', 'property', 'iSphere');
     setOrUpdateMetaTag($, 'meta[property="og:type"]', 'property', 'website');
     setOrUpdateMetaTag($, 'meta[name="twitter:card"]', 'name', 'summary_large_image');
     setOrUpdateMetaTag($, 'meta[name="twitter:title"]', 'name', title);

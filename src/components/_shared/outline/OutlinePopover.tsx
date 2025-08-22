@@ -3,7 +3,7 @@ import { PopperPlacementType } from '@mui/material';
 import React, { ReactElement, useMemo } from 'react';
 import { RichTooltip } from '@/components/_shared/popover';
 
-export function OutlinePopover ({
+export function OutlinePopover({
   children,
   open,
   onClose,
@@ -31,7 +31,6 @@ export function OutlinePopover ({
         className={'flex h-fit max-h-[590px] w-[268px] flex-col overflow-y-auto overflow-x-hidden appflowy-scroller'}
       >
         {content}
-        {variant === 'publish' && <AppFlowyPower />}
 
       </div>
     );

@@ -35,7 +35,7 @@ function AfterPaymentPage() {
             'mt-[32px] mb-[48px] h-[68px] rounded-[20px] px-[44px] py-[18px] text-[20px] font-medium leading-[120%] text-content-on-fill'
           }
         >
-          Back to iKnowledgeBase
+          Back to iSphere
         </Button>
       </div>
     </div>

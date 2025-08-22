@@ -104,15 +104,6 @@ function PublishPanel({ viewId, opened, onClose }: { viewId: string; onClose: ()
           >
             {t('shareAction.unPublish')}
           </Button>
-          <Button
-            className={'max-w-[50%] flex-1'}
-            onClick={() => {
-              window.open(url, '_blank');
-            }}
-            variant={'contained'}
-          >
-            {t('shareAction.visitSite')}
-          </Button>
         </div>
         <div className={'flex flex-col'}>
           <div className={'flex items-center justify-between gap-4 p-1.5 text-sm'}>

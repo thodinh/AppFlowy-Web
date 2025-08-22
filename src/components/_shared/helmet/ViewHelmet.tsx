@@ -3,7 +3,7 @@ import { getIconBase64 } from '@/utils/emoji';
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 
-function ViewHelmet ({
+function ViewHelmet({
   name,
   icon,
 }: {
@@ -66,7 +66,7 @@ function ViewHelmet ({
   if (!name) return null;
   return (
     <Helmet>
-      <title>{name} | iKnowledgeBase</title>
+      <title>{name} | iSphere</title>
     </Helmet>
   );
 }

@@ -99,6 +99,7 @@ export default defineConfig({
   server: {
     port: process.env.PORT ? parseInt(process.env.PORT) : 3000,
     strictPort: true,
+    allowedHosts: ['3000--main--ikb--thodinh.iz.io.vn'],
     host: '0.0.0.0',
     watch: {
       ignored: ['node_modules'],

@@ -31,7 +31,7 @@ const NotFound = () => {
         <div className={'mt-4 flex w-full items-center justify-between gap-4 px-2 max-sm:flex-col'}>
           <Button
             component={Link}
-            to='https://appflowy.com/download'
+            to='https://innoria.com/download'
             variant='contained'
             color='primary'
             className={'flex-1 rounded-[8px] py-3 px-4 text-[20px] font-medium max-md:text-base max-sm:w-full'}

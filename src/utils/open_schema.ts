@@ -101,19 +101,19 @@ export const openAppOrDownload = (config: AppConfig): void => {
   };
 };
 
-export function openOnly (schema?: string) {
+export function openOnly(schema?: string) {
 
   return openAppOrDownload({
     appScheme: schema || openAppFlowySchema,
   });
 }
 
-export function openOrDownload (schema?: string) {
+export function openOrDownload(schema?: string) {
   const os = getOS();
 
   if (os === 'ios' || os === 'android') {
-    const universalLink = 'https://appflowy.com/download';
-    const intentUrl = `intent://appflowy.com/download#Intent;` +
+    const universalLink = 'https://innoria.com/download';
+    const intentUrl = `intent://innoria.com/download#Intent;` +
       'scheme=https;' +
       'package=io.appflowy.app;' +
       `S.browser_fallback_url=${encodeURIComponent(androidDownloadLink)};` +

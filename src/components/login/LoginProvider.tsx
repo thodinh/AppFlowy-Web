@@ -30,7 +30,7 @@ const moreOptionsVariants = {
   },
 };
 
-function LoginProvider ({ redirectTo }: { redirectTo: string }) {
+function LoginProvider({ redirectTo }: { redirectTo: string }) {
   const { t } = useTranslation();
   const [expand, setExpand] = React.useState(false);
   const options = useMemo(
@@ -39,22 +39,7 @@ function LoginProvider ({ redirectTo }: { redirectTo: string }) {
         label: t('web.continueWithGoogle'),
         Icon: GoogleSvg,
         value: 'google',
-      },
-      {
-        label: t('web.continueWithApple'),
-        Icon: AppleSvg,
-        value: 'apple',
-      },
-      {
-        label: t('web.continueWithGithub'),
-        value: 'github',
-        Icon: GithubSvg,
-      },
-      {
-        label: t('web.continueWithDiscord'),
-        value: 'discord',
-        Icon: DiscordSvg,
-      },
+      }
     ],
     [t],
   );
@@ -112,27 +97,6 @@ function LoginProvider ({ redirectTo }: { redirectTo: string }) {
           {renderOption(option)}
         </motion.div>
       ))}
-
-      <AnimatePresence mode="wait">
-        {!expand && (
-          <motion.div
-            className="w-full"
-            initial="initial"
-            animate="initial"
-            exit="exit"
-            whileHover="hover"
-            whileTap="tap"
-          >
-            <Button
-              variant={'link'}
-              onClick={() => setExpand(true)}
-              className={'w-full'}
-            >
-              {t('web.moreOptions')}
-            </Button>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
       <AnimatePresence>
         {expand && (

@@ -11,7 +11,6 @@ import { useTranslation } from 'react-i18next';
 import { ReactComponent as WhatsNewIcon } from '@/assets/icons/star.svg';
 import { ReactComponent as SupportIcon } from '@/assets/icons/help.svg';
 import { ReactComponent as BugIcon } from '@/assets/icons/bug.svg';
-import { ReactComponent as FeedbackIcon } from '@/assets/icons/feedback.svg';
 import { ReactComponent as MoonIcon } from '@/assets/icons/moon.svg';
 import { ReactComponent as SunIcon } from '@/assets/icons/sun.svg';
 import { ReactComponent as DocumentationIcon } from '@/assets/icons/help_&_documentation.svg';
@@ -61,7 +60,7 @@ export default function Help() {
             <Button
               component={'a'}
               target='_blank'
-              href={'https://www.appflowy.com/what-is-new'}
+              href={'https://www.innoria.com/what-is-new'}
               className={'justify-start'}
               color={'inherit'}
               startIcon={<WhatsNewIcon />}
@@ -71,7 +70,7 @@ export default function Help() {
             </Button>
             <Button
               component={'a'}
-              href={'https://appflowy.com/guide/getting-started-with-appflowy'}
+              href={'https://innoria.com/guide/getting-started-with-appflowy'}
               className={'justify-start'}
               target='_blank'
               color={'inherit'}
@@ -108,52 +107,6 @@ export default function Help() {
               variant={'text'}
             >
               {t('questionBubble.debug.name')}
-            </Button>
-            <Button
-              component={'a'}
-              target='_blank'
-              href={'https://github.com/AppFlowy-IO/AppFlowy-Web/issues/new/choose'}
-              className={'justify-start'}
-              color={'inherit'}
-              startIcon={<FeedbackIcon />}
-              variant={'text'}
-            >
-              {t('questionBubble.feedback')}
-            </Button>
-
-            <Divider />
-            <Button
-              size={'small'}
-              target='_blank'
-              component={'a'}
-              href={'https://forum.appflowy.io/'}
-              className={'justify-start text-text-caption'}
-              color={'inherit'}
-              variant={'text'}
-            >
-              Community Forum
-            </Button>
-            <Button
-              size={'small'}
-              component={'a'}
-              target='_blank'
-              href={'https://x.com/appflowy'}
-              className={'justify-start text-text-caption'}
-              color={'inherit'}
-              variant={'text'}
-            >
-              Twitter - @appflowy
-            </Button>
-            <Button
-              size={'small'}
-              component={'a'}
-              target='_blank'
-              href={'https://www.reddit.com/r/iKnowledgeBase/'}
-              className={'justify-start text-text-caption'}
-              color={'inherit'}
-              variant={'text'}
-            >
-              Reddit - r/appflowy
             </Button>
           </div>
         </Popover>
