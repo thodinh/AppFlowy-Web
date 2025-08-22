@@ -20,8 +20,7 @@ function RightMenu() {
     const url = `${window.origin}${window.location.pathname}`;
 
     window.open(
-      `${window.origin}/as-template?viewUrl=${encodeURIComponent(url)}&viewName=${viewName || ''}&viewId=${
-        viewId || ''
+      `${window.origin}/as-template?viewUrl=${encodeURIComponent(url)}&viewName=${viewName || ''}&viewId=${viewId || ''
       }`,
       '_blank'
     );
@@ -29,7 +28,7 @@ function RightMenu() {
 
   const currentUser = useCurrentUser();
 
-  const isAppFlowyUser = currentUser?.email?.endsWith('@appflowy.io');
+  const isAppFlowyUser = currentUser?.email?.endsWith('@innoria.com');
 
   return (
     <>

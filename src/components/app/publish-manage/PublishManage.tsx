@@ -216,6 +216,28 @@ export function PublishManage ({
       <Divider className={'mb-1'} />
 
       <div className={'w-full flex text-sm items-center gap-2'}>
+        <div className={'flex-1 overflow-hidden'}>
+          <Tooltip
+            title={
+              <div>
+                <div>{t('shareAction.visitSite')}</div>
+                <div>{url}</div>
+              </div>
+            }
+          >
+            <Button
+              onClick={() => {
+                void openUrl(url, '_blank');
+              }}
+              className={'overflow-hidden justify-start w-full'}
+              color={'inherit'}
+              size={'small'}
+            >
+              <span className={'truncate'}>{window.location.host}/{namespace}</span>
+
+            </Button>
+          </Tooltip>
+        </div>
         <div className={'flex-1 flex items-center justify-between'}>
           <HomePageSetting
             activePlan={activeSubscription}

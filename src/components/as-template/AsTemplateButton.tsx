@@ -6,7 +6,7 @@ import React, { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ReactComponent as TemplateIcon } from '@/assets/icons/template.svg';
 
-function AsTemplateButton ({ viewId }: { viewId: string }) {
+function AsTemplateButton({ viewId }: { viewId: string }) {
   const { t } = useTranslation();
 
   const {
@@ -23,7 +23,7 @@ function AsTemplateButton ({ viewId }: { viewId: string }) {
 
   if (!currentUser) return null;
 
-  const isAppFlowyUser = currentUser.email?.endsWith('@appflowy.io');
+  const isAppFlowyUser = currentUser.email?.endsWith('@innoria.com');
 
   if (!isAppFlowyUser) return null;
 

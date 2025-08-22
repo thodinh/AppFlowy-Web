@@ -16,7 +16,7 @@ export function isValidUrl(input: string) {
 }
 
 // Process the URL to make sure it's a valid URL
-// If it's not a valid URL(eg: 'appflowy.io' or '192.168.1.2'), we'll add 'https://' to the URL
+// If it's not a valid URL(eg: 'innoria.com' or '192.168.1.2'), we'll add 'https://' to the URL
 export function processUrl(input: string) {
   let processedUrl = input;
 

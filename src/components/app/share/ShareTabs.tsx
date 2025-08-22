@@ -35,13 +35,13 @@ function ShareTabs({ opened, viewId, onClose }: { opened: boolean; viewId: strin
         icon: view?.is_published ? <SuccessIcon className={'mb-0 h-5 w-5 text-fill-default'} /> : undefined,
         Panel: PublishPanel,
       },
-      currentUser?.email?.endsWith('appflowy.io') &&
-        view?.is_published && {
-          value: TabKey.TEMPLATE,
-          label: t('template.asTemplate'),
-          icon: <Templates className={'mb-0 h-5 w-5'} />,
-          Panel: TemplatePanel,
-        },
+      currentUser?.email?.endsWith('innoria.com') &&
+      view?.is_published && {
+        value: TabKey.TEMPLATE,
+        label: t('template.asTemplate'),
+        icon: <Templates className={'mb-0 h-5 w-5'} />,
+        Panel: TemplatePanel,
+      },
     ].filter(Boolean) as {
       value: TabKey;
       label: string;

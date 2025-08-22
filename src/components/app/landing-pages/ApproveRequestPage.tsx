@@ -219,10 +219,10 @@ function ApproveRequestPage() {
               components={{
                 email: (
                   <span
-                    onClick={() => window.open(`mailto:support@appflowy.io`, '_blank')}
+                    onClick={() => window.open(`mailto:support@innoria.com`, '_blank')}
                     className={'cursor-pointer text-fill-default underline'}
                   >
-                    support@appflowy.io
+                    support@innoria.com
                   </span>
                 ),
               }}

@@ -56,19 +56,6 @@ function InviteMember({ workspace, onClick }: { workspace: Workspace; onClick?: 
     }
   }, [getSubscriptions]);
 
-  const isExceed = useMemo(() => {
-    if (activeSubscriptionPlan === null) return false;
-    if (activeSubscriptionPlan === SubscriptionPlan.Free) {
-      return memberCount >= 2;
-    }
-
-    if (activeSubscriptionPlan === SubscriptionPlan.Pro) {
-      return memberCount >= 10;
-    }
-
-    return false;
-  }, [activeSubscriptionPlan, memberCount]);
-
   const handleOk = async () => {
     if (!service || !currentWorkspaceId) return;
     try {
@@ -141,21 +128,9 @@ function InviteMember({ workspace, onClick }: { workspace: Workspace; onClick?: 
         okText={t('inviteMember.requestInvites')}
         onOk={handleOk}
       >
-        <div
-          style={{
-            display: isExceed ? 'flex' : 'none',
-          }}
-          className={'mb-8 flex w-full flex-wrap items-center gap-1 overflow-hidden text-text-caption'}
-        >
-          <TipIcon className={'h-4 w-4 text-function-warning'} />
-          {t('inviteMember.inviteFailedMemberLimit')}
-          <span onClick={handleUpgrade} className={'cursor-pointer text-fill-default hover:underline'}>
-            {t('inviteMember.upgrade')}
-          </span>
-        </div>
         <div className={'mb-1 text-xs text-text-caption'}>{t('inviteMember.emails')}</div>
         <OutlinedInput
-          readOnly={isExceed}
+          readOnly={false}
           fullWidth={true}
           size={'small'}
           value={value}

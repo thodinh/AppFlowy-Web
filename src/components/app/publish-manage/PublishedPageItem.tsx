@@ -48,6 +48,14 @@ function PublishedPageItem({ namespace, onClose, view, onUnPublish }: {
   const actions = useMemo(() => {
     return [
       {
+        value: 'visit',
+        label: t('shareAction.visitSite'),
+        IconComponent: GlobalIcon,
+        onClick: () => {
+          void openUrl(url, '_blank');
+        },
+      },
+      {
         value: 'copy',
         label: t('shareAction.copyLink'),
         IconComponent: CopyIcon,
@@ -62,15 +70,15 @@ function PublishedPageItem({ namespace, onClose, view, onUnPublish }: {
         label: t('shareAction.unPublish'),
         tooltip: !(isOwner || isPublisher) ? t('settings.sites.error.unPublishPermissionDenied') : undefined,
         IconComponent: unPublishLoading ? CircularProgress : TrashIcon,
-        onClick: async() => {
-          if(!(isOwner || isPublisher)) {
+        onClick: async () => {
+          if (!(isOwner || isPublisher)) {
             return;
           }
 
           setUnPublishLoading(true);
           try {
             await onUnPublish(view.view_id);
-          } catch(e) {
+          } catch (e) {
             console.error(e);
           } finally {
             setUnPublishLoading(false);
@@ -84,7 +92,7 @@ function PublishedPageItem({ namespace, onClose, view, onUnPublish }: {
 
         IconComponent: SettingIcon,
         onClick: () => {
-          if(!(isOwner || isPublisher)) return;
+          if (!(isOwner || isPublisher)) return;
           setAnchorEl(null);
           setOpenSetting(true);
         },
@@ -93,15 +101,15 @@ function PublishedPageItem({ namespace, onClose, view, onUnPublish }: {
     ];
   }, [t, isOwner, isPublisher, unPublishLoading, url, onUnPublish, view.view_id]);
 
-  const updatePublishName = useCallback(async(newPublishName: string) => {
-    if(!service || !workspaceId || !view) return;
+  const updatePublishName = useCallback(async (newPublishName: string) => {
+    if (!service || !workspaceId || !view) return;
     try {
       await service.updatePublishConfig(workspaceId, {
         view_id: view.view_id,
         publish_name: newPublishName,
       });
       // eslint-disable-next-line
-    } catch(e: any) {
+    } catch (e: any) {
       notify.error(e.message);
     }
 
@@ -123,7 +131,7 @@ function PublishedPageItem({ namespace, onClose, view, onUnPublish }: {
           <Button
             color={'inherit'}
             key={view.view_id}
-            onClick={async() => {
+            onClick={async () => {
               await toView(view.view_id);
               onClose?.();
             }}
@@ -135,9 +143,9 @@ function PublishedPageItem({ namespace, onClose, view, onUnPublish }: {
             />}
             className={'w-full p-1 px-2 justify-start overflow-hidden'}
           >
-              <span className={'truncate'}>
-                {view.name || t('menuAppHeader.defaultNewPageName')}
-              </span>
+            <span className={'truncate'}>
+              {view.name || t('menuAppHeader.defaultNewPageName')}
+            </span>
 
           </Button>
         </Tooltip>
@@ -158,9 +166,9 @@ function PublishedPageItem({ namespace, onClose, view, onUnPublish }: {
             size={'small'}
             className={'w-full p-1 px-2 justify-start overflow-hidden'}
           >
-              <span className={'truncate'}>
-                {publishName}
-              </span>
+            <span className={'truncate'}>
+              {publishName}
+            </span>
           </Button>
         </Tooltip>
       </div>
@@ -205,7 +213,7 @@ function PublishedPageItem({ namespace, onClose, view, onUnPublish }: {
         onUnPublish={() => {
           return onUnPublish(view.view_id);
         }}
-        updatePublishName={async(publishName: string) => {
+        updatePublishName={async (publishName: string) => {
           await updatePublishName(publishName);
           setPublishName(publishName);
         }}
