@@ -15,13 +15,6 @@ function RightMenu() {
     <div className={'flex items-center gap-2'}>
       {viewId && <ShareButton viewId={viewId} />}
       {viewId && <MoreActions viewId={viewId} />}
-
-      <Divider orientation={'vertical'} className={'mx-2'} flexItem />
-      <Tooltip title={t('publish.downloadApp')}>
-        <button onClick={() => openOrDownload()}>
-          <Logo className={'h-6 w-6'} />
-        </button>
-      </Tooltip>
     </div>
   );
 }

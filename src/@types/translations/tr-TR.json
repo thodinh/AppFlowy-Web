@@ -1,5 +1,5 @@
 {
-  "appName": "AppFlowy",
+  "appName": "iKnowledgeBase",
   "defaultUsername": "Ben",
   "welcomeText": "@:appName'a Hoş Geldiniz",
   "welcomeTo": "Hoş Geldiniz",
@@ -115,14 +115,14 @@
     "csv": "CSV",
     "copyLink": "Bağlantıyı Kopyala",
     "publishToTheWeb": "Web'de Yayınla",
-    "publishToTheWebHint": "AppFlowy ile bir web sitesi oluşturun",
+    "publishToTheWebHint": "iKnowledgeBase ile bir web sitesi oluşturun",
     "publish": "Yayınla",
     "unPublish": "Yayından kaldır",
     "visitSite": "Siteyi ziyaret et",
     "exportAsTab": "Şu şekilde dışa aktar",
     "publishTab": "Yayınla",
     "shareTab": "Paylaş",
-    "publishOnAppFlowy": "AppFlowy'de yayınla",
+    "publishOnAppFlowy": "iKnowledgeBase'de yayınla",
     "copyLinkSuccess": "Bağlantı panoya kopyalandı",
     "copyLinkFailed": "Bağlantı panoya kopyalanamadı"
   },
@@ -167,8 +167,8 @@
   "newBoardText": "Yeni pano",
   "chat": {
     "newChat": "Yapay Zeka Sohbeti",
-    "inputMessageHint": "AppFlowy Yapay Zekasına mesaj gönder",
-    "unsupportedCloudPrompt": "Bu özellik yalnızca AppFlowy Cloud kullanıldığında kullanılabilir",
+    "inputMessageHint": "iKnowledgeBase Yapay Zekasına mesaj gönder",
+    "unsupportedCloudPrompt": "Bu özellik yalnızca iKnowledgeBase Cloud kullanıldığında kullanılabilir",
     "relatedQuestion": "İlgili",
     "serverUnavailable": "Hizmet geçici olarak kullanılamıyor. Lütfen daha sonra tekrar deneyin.",
     "aiServerUnavailable": "🌈 Üzgünüz! 🌈. Bir tek boynuzlu at yanıtımızı yedi. Lütfen tekrar deneyin!",
@@ -877,7 +877,7 @@
       "commonOther": "Diğer",
       "otherHint": "Cevabınızı buraya yazın",
       "questionOne": {
-        "question": "AppFlowy Pro aboneliğinizi iptal etmenize ne sebep oldu?",
+        "question": "iKnowledgeBase Pro aboneliğinizi iptal etmenize ne sebep oldu?",
         "answerOne": "Maliyet çok yüksek",
         "answerTwo": "Özellikler beklentileri karşılamadı",
         "answerThree": "Daha iyi bir alternatif buldum",
@@ -885,7 +885,7 @@
         "answerFive": "Hizmet sorunu veya teknik zorluklar"
       },
       "questionTwo": {
-        "question": "Gelecekte AppFlowy Pro'ya yeniden abone olmayı ne kadar olası görüyorsunuz?",
+        "question": "Gelecekte iKnowledgeBase Pro'ya yeniden abone olmayı ne kadar olası görüyorsunuz?",
         "answerOne": "Çok olası",
         "answerTwo": "Biraz olası",
         "answerThree": "Emin değilim",
@@ -900,7 +900,7 @@
         "answerFour": "Yerel Yapay Zeka modellerine erişim"
       },
       "questionFour": {
-        "question": "AppFlowy ile genel deneyiminizi nasıl tanımlarsınız?",
+        "question": "iKnowledgeBase ile genel deneyiminizi nasıl tanımlarsınız?",
         "answerOne": "Harika",
         "answerTwo": "İyi",
         "answerThree": "Ortalama",
@@ -957,7 +957,7 @@
       "customPathPrompt": "@:appName veri klasörünü Google Drive gibi bulutla senkronize edilmiş bir klasörde saklamak risk oluşturabilir. Bu klasördeki veritabanına aynı anda birden fazla konumdan erişilir veya değiştirilirse, senkronizasyon çakışmaları ve olası veri bozulmasıyla sonuçlanabilir",
       "importAppFlowyData": "Harici @:appName Klasöründen Veri Al",
       "importingAppFlowyDataTip": "Veri aktarımı devam ediyor. Lütfen uygulamayı kapatmayın",
-      "importAppFlowyDataDescription": "Harici bir @:appName veri klasöründen veri kopyalayın ve geçerli AppFlowy veri klasörüne aktarın",
+      "importAppFlowyDataDescription": "Harici bir @:appName veri klasöründen veri kopyalayın ve geçerli iKnowledgeBase veri klasörüne aktarın",
       "importSuccess": "@:appName veri klasörü başarıyla alındı",
       "importFailed": "@:appName veri klasörü alınamadı",
       "importGuide": "Daha fazla bilgi için lütfen referans belgeyi kontrol edin"
@@ -2256,7 +2256,7 @@
     "reportPage": "Sayfayı bildir",
     "databaseHasNotBeenPublished": "Veritabanı yayınlama henüz desteklenmemektedir.",
     "createdWith": "Şununla oluşturuldu",
-    "downloadApp": "AppFlowy'i İndir",
+    "downloadApp": "iKnowledgeBase'i İndir",
     "copy": {
       "codeBlock": "Kod bloğunun içeriği panoya kopyalandı",
       "imageBlock": "Resim bağlantısı panoya kopyalandı",
@@ -2268,7 +2268,7 @@
     "publishFailed": "Yayınlama başarısız oldu",
     "unpublishFailed": "Yayından kaldırma başarısız oldu",
     "noAccessToVisit": "Bu sayfaya erişim yok...",
-    "createWithAppFlowy": "AppFlowy ile bir web sitesi oluşturun",
+    "createWithAppFlowy": "iKnowledgeBase ile bir web sitesi oluşturun",
     "fastWithAI": "Yapay Zeka ile hızlı ve kolay.",
     "tryItNow": "Şimdi deneyin",
     "onlyGridViewCanBePublished": "Yalnızca Kılavuz görünümü yayınlanabilir",

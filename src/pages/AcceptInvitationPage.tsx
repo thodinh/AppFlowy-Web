@@ -98,7 +98,7 @@ function AcceptInvitationPage() {
           className={'whitespace-pre-wrap break-words px-4 text-center text-[40px] leading-[107%] max-sm:text-[24px]'}
         >
           {t('invitation.join')} <span className={'font-semibold'}>{invitation?.workspace_name}</span>{' '}
-          {t('invitation.on')} <span className={'whitespace-nowrap'}>AppFlowy</span>
+          {t('invitation.on')} <span className={'whitespace-nowrap'}>iKnowledgeBase</span>
         </div>
         <Divider className={'w-[400px] max-w-full'} />
         <div className={'flex items-center justify-center gap-4 py-1'}>

@@ -123,7 +123,7 @@ export function AIChat({
           <div className={'text-base mb-2'}>{`Chat listings only. For full chat features:`}</div>
           <ul className={'px-2 text-text-caption'}>
             <li>• Use desktop browser</li>
-            <li>• Download AppFlowy's mobile app</li>
+            <li>• Download iKnowledgeBase's mobile app</li>
           </ul>
         </DialogContent>
         <DialogActions className={'w-full p-4 flex items-center justify-center gap-2'}>

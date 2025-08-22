@@ -193,10 +193,10 @@ function AppPage() {
         title: 'Edit in app',
         message: (
           <div className={'flex w-full flex-col items-start gap-2'}>
-            <div>{`Editing databases is supported in AppFlowy's desktop and mobile apps`}</div>
+            <div>{`Editing databases is supported in iKnowledgeBase's desktop and mobile apps`}</div>
             <div className={'flex items-center gap-2 text-sm text-text-caption'}>
               <TipIcon className={'h-5 w-5 text-function-warning'} />
-              Don't have AppFlowy?{' '}
+              Don't have iKnowledgeBase?{' '}
               <a className={'text-fill-default hover:underline'} href={desktopDownloadLink}>
                 Download
               </a>
@@ -221,7 +221,7 @@ function AppPage() {
                 onClick={() => window.open(openAppFlowySchema, '_current')}
                 variant={'contained'}
               >
-                Open in AppFlowy
+                Open in iKnowledgeBase
               </Button>
             </div>
           </div>

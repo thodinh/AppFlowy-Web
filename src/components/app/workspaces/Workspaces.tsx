@@ -162,35 +162,6 @@ export function Workspaces() {
           onClick={handleSignOut}
           startIcon={<LogoutIcon />}
         >{t('button.logout')}</Button>
-
-
-        {isOwner && <>
-          <Divider className={'w-full'} />
-          <Button
-            size={'small'}
-            startIcon={<UpgradeIcon />}
-            color={'inherit'}
-            onClick={() => {
-              setOpenUpgradePlan(true);
-              setOpen(false);
-            }}
-            className={'justify-start px-2'}
-          >
-            {t('subscribe.changePlan')}
-          </Button>
-          <Button
-            size={'small'}
-            startIcon={<UpgradeAIMaxIcon />}
-            color={'inherit'}
-            onClick={() => {
-              setOpenUpgradeAIMax(true);
-              setOpen(false);
-            }}
-            className={'justify-start px-2'}
-          >
-            {t('subscribe.getAIMax')}
-          </Button>
-        </>}
       </div>
 
     </Popover>

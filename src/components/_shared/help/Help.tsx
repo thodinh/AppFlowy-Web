@@ -148,7 +148,7 @@ export default function Help() {
               size={'small'}
               component={'a'}
               target='_blank'
-              href={'https://www.reddit.com/r/AppFlowy/'}
+              href={'https://www.reddit.com/r/iKnowledgeBase/'}
               className={'justify-start text-text-caption'}
               color={'inherit'}
               variant={'text'}

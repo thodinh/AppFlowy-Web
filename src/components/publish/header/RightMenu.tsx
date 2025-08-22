@@ -42,12 +42,6 @@ function RightMenu() {
           </IconButton>
         </Tooltip>
       )}
-      <Divider orientation={'vertical'} className={'mx-2'} flexItem />
-      <Tooltip title={t('publish.downloadApp')}>
-        <button onClick={() => openOrDownload()}>
-          <Logo className={'h-5 w-5'} />
-        </button>
-      </Tooltip>
     </>
   );
 }
